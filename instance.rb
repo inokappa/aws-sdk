@@ -14,6 +14,7 @@ AWS.config(config)
 ec2 = AWS::EC2.new(config)
 
 #
+puts "id\t\thypervisor\tipaddress" 
 ec2.instances.each do |instance|
-  puts 'instance.hypervisor' + 'instance.ip_address'
+  puts "#{instance.id}\t#{instance.hypervisor}\t\t#{instance.ip_address}"
 end
